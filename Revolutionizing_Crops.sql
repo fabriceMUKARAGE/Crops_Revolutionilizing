@@ -1,4 +1,4 @@
-drop database if exists Revolutionizing_Crops;
+
 create database Revolutionizing_Crops;
 use Revolutionizing_Crops;
 
@@ -38,7 +38,6 @@ Thename Varchar(50),
 type Varchar(30),
 primary key(FertilizerID)
 );
-
 
 Create table Farmer(
 FarmerID int not null, 
@@ -321,7 +320,7 @@ select FarmerID from Crop where
  
  
  /*
- 6. displaying the fertilizer information with ID greater than 53 and with the p letter in their names on the ascending order 
+ 6. displaying The fertilizer information with ID greater than 53 and with the p letter in their names on the ascending order 
  */
 Select * from 
 Fertilizer WHERE
