@@ -1,13 +1,4 @@
 
-
-<?php
-use Phppot\Member;
-if (! empty($_POST["signup-btn"])) {
-    require_once './Model/Member.php';
-    $member = new Member();
-    $registrationResponse = $member->registerMember();
-}
-?>
 <HTML>
 <HEAD>
 <TITLE>User registration</TITLE>
@@ -63,7 +54,7 @@ if (! empty($_POST["signup-btn"])) {
 							<input class="input-box-330" type="email" name="email" id="email">
 						</div>
 					</div>
-
+	
                     <div class="row">
 						<div class="inline-block">
 							<div class="form-label">
@@ -93,6 +84,20 @@ if (! empty($_POST["signup-btn"])) {
 								name="confirm-password" id="confirm-password">
 						</div>
 					</div>
+
+					<div class="row">
+						<div class="inline-block">
+							<div class="form-label">
+								Select Preferred<span class="required error" id="select-info"></span>
+							</div>
+							
+							<select name="person" id="person">
+								<option value="Farmer">Farmer</option>
+								<option value="Customer">Customer</option>
+								<option value="Vistor">Vistor</option>
+							</select>
+							</div>
+						</div>
 
 					<div class="row">
 						<input class="btn" type="submit" name="signup-btn"
@@ -161,5 +166,7 @@ function signupValidation() {
 	return valid;
 }
 </script>
+
+
 </BODY>
 </HTML>

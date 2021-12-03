@@ -94,11 +94,15 @@ if(!$conn){
       <!-- end header -->
 <br>
 <br>
-<div>
+<center>
+<di>>
 <h1>
    You can now check up for the farmers, customers, <br> markets and stock from the farmer from thei different location in the country
-</h1>
+</h1> 
 </div>
+</center>
+<br><br>
+<br><br>
 <br><br>
 <br><br>
 <br><br>
@@ -110,30 +114,15 @@ if(!$conn){
          <div class="footer">
             <div class="container">
                <div class="row">
-                        <div class="col-lg-2 col-md-6 col-sm-6">
-                           <div class="hedingh3 text_align_left">
-                              <h3>Resources</h3>
-                              <ul class="menu_footer">
-                                 <li><a href="index.html">Home</a><li>
-                                 <li><a href="javascript:void(0)">What we do</a><li>
-                                 <li> <a href="javascript:void(0)">Media</a><li>
-                                 <li> <a href="javascript:void(0)">Travel Advice</a><li>
-                                 <li><a href="javascript:void(0)">Protection</a><li>
-                                 <li><a href="javascript:void(0)">Care</a><li>
-                              </ul>
-                             
-           
-                           </div>
-                        </div>
+
                         <div class="col-lg-3 col-md-6 col-sm-6">
                            <div class="hedingh3 text_align_left">
                              <h3>About</h3>
-                              <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various</p>
+                             <p>Revolutionalizing Crops is aiming to provide good services to people so that they can maximize their production in growing crops. The mission and vision of this company are to help farmers across the country to maximize their production through our services.</p>
                            </div>
                         </div>
                      
                 
-                       
                         <div class="col-lg-3 col-md-6 col-sm-6">
                            <div class="hedingh3  text_align_left">
                               <h3>Contact  Us</h3>
@@ -153,9 +142,9 @@ if(!$conn){
                   </div>
                      <div class="col-lg-4 col-md-6 col-sm-6">
                            <div class="hedingh3 text_align_left">
-                              <h3>countries</h3>
+                              
                               <div class="map">
-                                <img src="images/map.png" alt="#"/>
+                                <img src="images/rwanda.png" alt="#"/>
                               </div>
                            </div>
                         </div>

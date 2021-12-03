@@ -1,6 +1,16 @@
-
 create database Revolutionizing_Crops;
 use Revolutionizing_Crops;
+
+
+create table Registration(
+personID int auto_increment,
+Username varchar(50) not null unique,
+Email varchar(80) not null unique,
+Phone varchar(50),
+Password varchar(50) not null unique,
+Persontype varchar(10) null,
+primary key (personID)
+);
 
 create table Citizen(
 CitizenID int not null,
@@ -124,6 +134,10 @@ primary Key(landID),
 foreign key(CropID) references Crop(CropID)
 ); 
 
+insert into Registration (Username, Email, phone, password, Persontype) values
+("fmukarage", "fabrice.mukarage@gmail.com", "0245474547","Aghaoakdasdlfa","Farmer"),
+("erick", "erick@gmail.com", "07878778747","asdfdlfa","Vistor"),
+("karisa", "karisae@gmail.com", "0245474454","A447asa","Farmer");
 
 insert into Citizen(CitizenID, fname,lname,age, gender, qualification) values
 (100,"fabrice","MUKARAGE",23,"Male","bachelor degree"),
