@@ -1,9 +1,9 @@
 <HTML>
 <HEAD>
 <TITLE>Revolutionilizing Crops login</TITLE>
-<link href="assets/css/phppot-style.css" type="text/css"
+<link href="registration/css/firststyle.css" type="text/css"
 	rel="stylesheet" />
-<link href="assets/css/user-registration.css" type="text/css"
+<link href="registration/css/registration.css" type="text/css"
 	rel="stylesheet" />
 <script src="vendor/jquery/jquery-3.3.1.js" type="text/javascript"></script>
 </HEAD>
@@ -13,8 +13,9 @@
 			<div class="login-signup">
 				<a href="signup.php">Sign up</a>
 			</div>
+
 			<div class="signup-align">
-				<form name="login" action="admin_index.php" method="post"
+				<form name="login" action="information.php" method="post"
 					onsubmit="return loginValidation()">
 					<div class="signup-heading">Login</div>
 				<?php if(!empty($loginResult)){?>
@@ -48,18 +49,46 @@
 		</div>
 	</div>
 
+	<?php
+				$db_host = "localhost";
+				$db_user = "root";
+				$db_password = "Agahozo12!@";
+				$db_name = "Revolutionizing_Crops";
+
+				//connection
+				$conn = mysqli_connect($db_host, $db_user, $db_password, $db_name);
+
+				//check connection
+				if(!$conn){
+					die("connection failed");
+				}
+				if(isset($_POST['login-btn'])){
+				$myusername = $_POST['username'];
+				$mypassword = $_POST['password'];
+				$query = "SELECT * FROM Registration WHERE Username='$myusername' and Password='$mypassword'";
+				$result = mysql_query($query);	
+
+				mysql_close();
+				
+				if($result===false){
+						echo 'Incorrect Username or Password';
+				}
+			}
+			?>
+
+
 	<script>
 function loginValidation() {
 	var valid = true;
 	$("#username").removeClass("error-field");
 	$("#password").removeClass("error-field");
 
-	var firstname = $("#username").val();
+	var username = $("#username").val();
 	var Password = $('#password').val();
 
 	$("#username-info").html("").hide();
 
-	if (firstname.trim() == "") {
+	if (username.trim() == "") {
 		$("#username-info").html("required.").css("color", "#ee0000").show();
 		$("#username").addClass("error-field");
 		valid = false;
@@ -67,7 +96,7 @@ function loginValidation() {
 
 	$("#password-info").html("").hide();
 	if (Password.trim() == "") {
-		$("#login-password-info").html("required.").css("color", "#ee0000").show();
+		$("#password-info").html("required.").css("color", "#ee0000").show();
 		$("#password").addClass("error-field");
 		valid = false;
 	}
@@ -78,49 +107,6 @@ function loginValidation() {
 	return valid;
 }
 </script>
-
-
-<?php
-/* if a person makes registration, 
-    records are stored into the database
-*/
-if(isset($_POST['signup-btn'])){
-$username= $_POST['username'];
-$email= $_POST['email'];
-$phone= $_POST['phone'];
-$password= $_POST['password'];
-$person= $_POST['person'];
-   
-
-	//Database connection
-	require "database_credential.php";
-	$conn = new mysqli(servename, username, password, db);
-	if ($conn->connect_error) {
-		die("Connection failed: " . $conn->connect_error);
-	  }
-
- 	// inserting the sign up data for a driver into the database
-	$sql= "INSERT INTO Registration (Username, Email, Phone, Password, Persontype) VALUES ('$username', '$email', '$phone', '$password', '$person')";
-
-	if ($conn->query($sql) === FALSE) {
-		echo "<center><h2 style='color:	#ff6b6b'>You either didn't fill all required details or 
-		someone has already registered with the same information you are providing <br>
-		<br> Please try to register again to be able to login into the system</h2></center>";
-	}
-    else{
-        echo "
-        <center><h2> <br><br> You can now login into the system</h2>
-        </center>";
-    }
-  
-		  
-	$conn->close();
-    
-
-}
-
-?>
-
 
 
 <!--Checking if the user has already registered in the system-->

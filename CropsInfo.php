@@ -75,7 +75,7 @@ if(!$conn){
                      <div class="navbar-area">
                         <nav class="site-navbar">
                            <ul>
-                           <li><a class="active" href="admin_index.php">Home</a></li>
+                           <li><a class="active" href="information.php">Home</a></li>
                               <li><a href="Stuffs.php">Stuffs</a></li>
                               <li><a href="users.php">Farmer & Consumer</a></li>
                               <li><a href="Farming.php">Market & Stock</a></li>

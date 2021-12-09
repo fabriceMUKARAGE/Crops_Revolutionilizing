@@ -1,3 +1,4 @@
+drop database revolutionizing_crops;
 create database Revolutionizing_Crops;
 use Revolutionizing_Crops;
 
@@ -10,6 +11,14 @@ Phone varchar(50),
 Password varchar(50) not null unique,
 Persontype varchar(10) null,
 primary key (personID)
+);
+create table Contact_Inquiries(
+questionID int,
+fullname varchar(20),
+phone varchar (20),
+email varchar(80),
+message varchar(5000),
+primary key (questionID)
 );
 
 create table Citizen(

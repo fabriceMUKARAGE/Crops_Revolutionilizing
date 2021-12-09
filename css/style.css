@@ -892,9 +892,9 @@ button {
 /** end cases section **/
 
 
-/** doctors section **/
+/** people section **/
 
-.doctors {
+.people {
     background: #fff;
    
    padding-top: 50px;
@@ -950,7 +950,7 @@ button {
 
 
 
-.doctors::before {
+.people::before {
     position: absolute;
     content: "";
     right: 4%;
@@ -960,7 +960,7 @@ button {
     height: 121px;
 }
 
-/** end doctors section **/
+/** end people section **/
 
 
 /** contact **/
@@ -1186,39 +1186,6 @@ ul.top_infomation li i:hover {
 }
 
 
-.copyright {
-    margin-top: 60px;
-   
-    padding-bottom: 20px;
-}
-
-.copyright p {
-    border-top:#d1d1d1 solid 1px;
-    padding-top: 20px;
-    color: #d1d1d1;
-    font-size: 17px;
-    line-height: 22px;
-    text-align: center;
-    font-weight: normal;
-}
-
-.copyright a {
-    color: #d1d1d1;
-}
-
-.copyright a:hover {
-    color: green;
-}
-
-
-/** end footer **/
-
-
-
-/**  inner page css **/
-
-
-
 .inner_page .full_bg {
      height: 106px;
      padding-bottom: 0;
@@ -1229,7 +1196,7 @@ ul.top_infomation li i:hover {
     margin-bottom: 80px;
 }
 
-.inner_page .doctors { padding-top: 140px;  padding-bottom: 50px;}
+.inner_page .people { padding-top: 140px;  padding-bottom: 50px;}
 .inner_page .coronata {
     padding-top: 130px;
     padding-bottom: 80px;
@@ -1240,3 +1207,4 @@ padding-bottom: 40px;}
     padding-top: 145px;
     padding-bottom: 80px;
 }
+
