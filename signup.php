@@ -12,7 +12,7 @@
 	<div class="phppot-container">
 		<div class="sign-up-container">
 			<div class="login-signup">
-				<a href="login.php">Login</a>
+				<a href="Login.php">Login</a>
 			</div>
 			<div class="">
 				<form name="sign-up" action="signup.php" method="POST"

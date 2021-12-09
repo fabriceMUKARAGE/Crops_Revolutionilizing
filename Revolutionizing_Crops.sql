@@ -1,4 +1,3 @@
-drop database revolutionizing_crops;
 create database Revolutionizing_Crops;
 use Revolutionizing_Crops;
 
