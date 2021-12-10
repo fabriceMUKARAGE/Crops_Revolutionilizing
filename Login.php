@@ -65,14 +65,12 @@
 				if(isset($_POST['login-btn'])){
 				$myusername = $_POST['username'];
 				$mypassword = $_POST['password'];
-				$query = "SELECT * FROM Registration WHERE Username='$myusername' and Password='$mypassword'";
-				$result = mysql_query($query);	
-
-				mysql_close();
-				
-				if($result===false){
+				$query = "SELECT * FROM Registration WHERE Username='$myusername' OR Password='$mypassword'";
+				$result = mysql_query($query);				
+				if($conn->query($query) === FALSE){
 						echo 'Incorrect Username or Password';
 				}
+				mysql_close();
 			}
 			?>
 

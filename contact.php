@@ -101,7 +101,7 @@
                            <input class="textarea" placeholder="Message" type="type" name="message" id="message">
                         </div>
                         <div class="col-md-12">
-                           <input class="send_btn"  type="submit" name="message"
+                           <input class="send_btn"  type="submit" name="Inquiry"
 							      id="message" value="send now" onclick="return messageConfirmation()">
                         </div>
                      </div>
@@ -126,7 +126,7 @@
 			var Email = $('#Email').val();
 			var message = $('#message').val();     
          if(Name.trim() != "" && PhoneNumber.trim() != "" && Email.trim() != "" && message.trim() != ""){
-               alert("Message Received Successfully, Team will reach out to you soon!")
+               alert("Message received Successfully, The team will reach out to you soon!")
             }
 
     }
@@ -135,7 +135,7 @@
       <?php
          /* stored inqueries into the database in contact_inquiries table
          */
-         if(isset($_POST['message'])){
+         if(isset($_POST['Inquiry'])){
          $name= $_POST['Name'];
          $phone= $_POST['PhoneNumber'];
          $email= $_POST['Email'];
